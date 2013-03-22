@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title><?php echo $title; ?></title>
+	<?php echo Asset::css('bootstrap.css'); ?>
+    <?php echo Asset::css('style.css'); ?> 
+</head>
+<body>
+<header>
+	<div id="logo">	<?php echo Asset::img('logo.png'); ?> </div>
+    	<aside class="clearfix">				
+         <?php /*
+                    if(isset($user_info))
+                    {
+                        echo $user_info;
+                    }
+                    else
+                    {
+                     if(Auth::instance()->check())
+					{
+						$link = array("Logged in as: ".Auth::instance()->get_screen_name(), Html::anchor('users/logout', 'Logout'));
+						
+						//echo Form::button('name', 'value', array('style' => 'border: 2px;'));
+					}
+					else
+					{
+						$link = array(Html::anchor('users/login', 'Login'), Html::anchor('users/register', 'Register'));
+					}
+					echo Html::ul($link);
+                    }
+           */     ?>
+    	</aside>
+	<nav>
+    <ul id="menu">
+        <li><?php echo Html::anchor('welcome', 'Home'); ?></li>
+        <li>
+          
+            <ul>
+                <li></li>
+
+            </ul>
+        </li>
+        <li><?php //echo Html::anchor('about', 'About'); ?></li>
+        <li><?php //echo Html::anchor('contact', 'Contact'); ?></li>
+    </ul>
+    
+    </nav>	
+</header>
+	<div class="container">
+		<div class="row">
+			<div class="span16">
+				<h1><?php echo $title; ?></h1>
+				<hr>
+
+<?php if (Session::get_flash('success')): ?>
+				<div class="alert-message success">
+					<p>
+					<?php echo implode('</p><p>', (array) Session::get_flash('success')); ?>
+					</p>
+				</div>
+<?php endif; ?>
+<?php if (Session::get_flash('error')): ?>
+				<div class="alert-message error">
+					<p>
+					<?php echo implode('</p><p>', (array) Session::get_flash('error')); ?>
+					</p>
+				</div>
+<?php endif; ?>
+			</div>
+			<div class="span16">
+<?php echo $content; ?>
+			</div>
+		</div>
+
+	</div>
+    
+    		<footer>
+        	
+        	<p>Don't copy my code!</p>
+
+		</footer>
+</body>
+</html>
