@@ -1,0 +1,12 @@
+--- 
+application/vnd.wap.wmlc: ".wmlc .wmlc .wmlc "
+application/vnd.wap.wmlscriptc: ".wmlsc .wmlsc .wmlsc "
+application/x-compress: ".Z "
+application/x-gzip: ".gz .tgz "
+application/x-pkcs7-crl: ".crl .crl .crl "
+application/x-tar: ".tgz .tgz .tgz "
+application/x-x509-ca-cert: ".crt .crt .crt "
+image/vnd.wap.wbmp: ".wbmp .wbmp .wbmp "
+text/html: ".shtml .shtml .shtml .shtml "
+text/vnd.wap.wml: ".wml .wml .wml "
+text/vnd.wap.wmlscript: ".wmls .wmls .wmls "
